@@ -4,6 +4,13 @@
 
 #include <stdlib.h>
 
+int print_ints(const int ints[], int length){
+    for (int i = 0; i < length; ++i) {
+        printf("%i ", ints[i]);
+    }
+    printf("\n");
+}
+
 int int_comparator (const void *a, const void *b) {
     return ( *(int*)a - *(int*)b );
 }
