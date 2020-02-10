@@ -3,7 +3,6 @@
 //
 
 #include "../common_utils_string.c"
-//#include "../common_utils_collections.c"
 
 // O(2^(n+1)). // Tried to minimize by cutting off with comparison with half-sum.
 int place_stones(const int *stones, int i, int n, int bunch_1, int bunch_2, int sum){
