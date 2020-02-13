@@ -2,7 +2,7 @@
 // Created by Sergey Fedorov on 08/02/2020.
 //
 
-#include "../common_utils_string.c"
+#include "../../utils/common_utils_string.c"
 
 int checkIfSolvable(const int cameras[8]){
     int all_sum = 0;
@@ -22,7 +22,7 @@ void simpleReduce(int *first, int *second, char l_1, char l_2){
     printf("%c%c-\n", l_1, l_2);
 }
 
-void complexReduce(int *first, int *second, char l_1, char distant){
+void complexReduce(int *first, int *second, char distant) {
     (*first)--; (*second)--;
     if (distant == 'H')      printf("EA+\nBA-\nEH-\n");
     else if (distant == 'F') printf("EA+\nFE-\nDA-\n");
@@ -41,7 +41,7 @@ void reduceVertex(int *cameras, const int cur_connections[5], char *letters) {
             }
         }
         if (!simpleDone) {
-            complexReduce(&cameras[cur_connections[0]], &cameras[cur_connections[4]], letters[cur_connections[0]], letters[cur_connections[4]]);
+            complexReduce(&cameras[cur_connections[0]], &cameras[cur_connections[4]], letters[cur_connections[4]]);
         }
     }
 }

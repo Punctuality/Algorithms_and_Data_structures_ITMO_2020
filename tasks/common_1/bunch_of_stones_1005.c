@@ -2,7 +2,7 @@
 // Created by Sergey Fedorov on 07/02/2020.
 //
 
-#include "../common_utils_string.c"
+#include "../../utils/common_utils_string.c"
 
 // O(2^(n+1)). // Tried to minimize by cutting off with comparison with half-sum.
 int place_stones(const int *stones, int i, int n, int bunch_1, int bunch_2, int sum){

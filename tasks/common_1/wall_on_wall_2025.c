@@ -3,7 +3,7 @@
 //
 
 #include <stdio.h>
-#include "../common_utils_string.c"
+#include "../../utils/common_utils_string.c"
 
 typedef struct {int men, teams;} test;
 

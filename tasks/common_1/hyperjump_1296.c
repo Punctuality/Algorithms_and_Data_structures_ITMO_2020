@@ -2,7 +2,7 @@
 // Created by Sergey Fedorov on 08/02/2020.
 //
 
-#include "../common_utils_string.c"
+#include "../../utils/common_utils_string.c"
 
 int main(){
     // 0 <= N <= 60000 => max 5 sym
