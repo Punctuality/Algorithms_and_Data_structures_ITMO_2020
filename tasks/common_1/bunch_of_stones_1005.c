@@ -4,7 +4,7 @@
 
 #include "../../utils/common_utils_string.c"
 
-// O(2^(n+1)). // Tried to minimize by cutting off with comparison with half-sum.
+// O(2^(n+1)). // Tried to minimise by cutting off comparison with half-sum.
 int place_stones(const int *stones, int i, int n, int bunch_1, int bunch_2, int sum){
     int cur_stone = stones[i];
     if (bunch_1 >= sum / 2) {
