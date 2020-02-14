@@ -8,3 +8,5 @@ add_executable(algos_1_1005 "tasks/common_1/bunch_of_stones_1005.c")
 add_executable(algos_1_1155 "tasks/common_1/duons_1155.c")
 add_executable(algos_1_1296 "tasks/common_1/hyperjump_1296.c")
 add_executable(algos_1_1401 "tasks/common_1/players_1401.c")
+
+add_executable(algos_2_1207 "tasks/common_2/median_of_surface_1207.cpp")
