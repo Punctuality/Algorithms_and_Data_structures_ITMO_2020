@@ -2,3 +2,4 @@
 /cmake-build-debug/
 judgeId.txt
 .idea
+/CMakeFiles
