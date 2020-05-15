@@ -13,10 +13,9 @@ private:
     int *tree;
 
 public:
-
     BinaryIndexedTree(){
         max_n = 1 << 17;
-        tree = (int*) calloc(2 << 18, sizeof(int));
+        tree = (int*) calloc(max_n * 4, sizeof(int));
     }
 
     void inline sum_update(int x, int amount) {
@@ -24,7 +23,7 @@ public:
             tree[x] += amount; // Øynene mine blør på grunn av den koden
     }
 
-    int inline find_k_th(int start_pos, int k_th) {
+    int inline find_k_th_soldier(int start_pos, int k_th) {
         while (start_pos < max_n){
             start_pos *= 2;
             if (k_th > tree[start_pos]) {
@@ -36,25 +35,29 @@ public:
     }
 };
 
-
-
-
 int main() {
     int n, k;
     std::cin >> n >> k;
 
     BinaryIndexedTree tree = BinaryIndexedTree();
 
+    // Fill tree with soldiers
+    // Ugh, bruh.
     for (int i = 0; i < n; ++i) {
         tree.sum_update(i, 1);
     }
 
-    int currPos = k - 1;
+    int curr_pos = k - 1;
     for (int i = 0; i < n; ++i) {
-        int pos = tree.find_k_th(1, currPos + 1);
+        // Find position of next soldier
+        int pos = tree.find_k_th_soldier(1, curr_pos + 1);
+        cout << pos + 1 << " ";
+
+        // Reduce distance sum
         tree.sum_update(pos, -1);
-        std::cout << pos + 1 << " ";
-        if (i < n - 1) currPos = (currPos - 1 + k) % (n - i - 1);
+
+        int remaining = n - i - 1;
+        int next_pos = curr_pos - 1 + k;
+        if (i < n - 1) curr_pos = next_pos % remaining;
     }
-    return 0;
 }
