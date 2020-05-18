@@ -21,3 +21,5 @@ add_executable(algos_3_1494 "tasks/common_3/mono_pool_1494.cpp")
 add_executable(algos_3_1521 "tasks/common_3/millitary_training_1521.cpp")
 add_executable(algos_3_1628 "tasks/common_3/white_stripes_1628.cpp")
 add_executable(algos_3_1650 "tasks/common_3/billionares_1650.cpp")
+
+add_executable(extra_1 "tasks/extra/fenwick_tree.cpp")
