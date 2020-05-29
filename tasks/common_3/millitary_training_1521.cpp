@@ -41,7 +41,7 @@ int main() {
 
     BinaryIndexedTree tree = BinaryIndexedTree();
 
-    // Fill tree with soldiers
+    // Feed tree with soldiers
     // Ugh, bruh.
     for (int i = 0; i < n; ++i) {
         tree.sum_update(i, 1);
