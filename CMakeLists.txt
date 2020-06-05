@@ -26,5 +26,6 @@ add_executable(algos_4_1080 "tasks/common_4/map_coloring_1080.cpp")
 add_executable(algos_4_1450 "tasks/common_4/russian_pipelines_1450.cpp")
 add_executable(algos_4_1160 "tasks/common_4/network_1160.cpp")
 add_executable(algos_4_1162 "tasks/common_4/currency_exchange_1162.cpp")
+add_executable(algos_4_1806 "tasks/common_4/mobile_telegraphs_1806.cpp")
 
 add_executable(extra_1 "tasks/extra/fenwick_tree.cpp")
